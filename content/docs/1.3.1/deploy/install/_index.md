@@ -61,15 +61,12 @@ curl -sSfL https://raw.githubusercontent.com/longhorn/longhorn/v{{< current-vers
 Example result:
 
 ```shell
-daemonset.apps/longhorn-environment-check created
-waiting for pods to become ready (0/3)
-all pods ready (3/3)
-
-  MountPropagation is enabled!
-
-cleaning up...
-daemonset.apps "longhorn-environment-check" deleted
-clean up complete
+[INFO]  Required dependencies are installed.
+[INFO]  Waiting for longhorn-environment-check pods to become ready (0/3)...
+[INFO]  All longhorn-environment-check pods are ready (3/3).
+[INFO]  Required packages are installed.
+[INFO]  Cleaning up longhorn-environment-check pods...
+[INFO]  Cleanup completed.
 ```
 
 ### Pod Security Policy
@@ -199,7 +196,7 @@ For RHEL, CentOS, and EKS with `EKS Kubernetes Worker AMI with AmazonLinux2 imag
 yum install nfs-utils
 ```
 
-We also provides an `nfs` installer to make it easier for users to install `nfs-client` automatically:
+We also provide an `nfs` installer to make it easier for users to install `nfs-client` automatically:
 ```
 kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v{{< current-version >}}/deploy/prerequisite/longhorn-nfs-installation.yaml
 ```
