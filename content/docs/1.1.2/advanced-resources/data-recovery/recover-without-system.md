@@ -31,7 +31,7 @@ This command gives users the ability to restore a backup to a `raw` image or a `
 
         kubectl create -f restore.yaml
 
-9.  Watch the result using:
+9. Watch the result using:
 
         kubectl -n longhorn-system get pod restore-to-file -w
 
